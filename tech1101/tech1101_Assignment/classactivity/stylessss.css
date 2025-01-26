@@ -1,0 +1,42 @@
+/* the stylessss.css file content */
+/********************Element Selectors***************************/
+body {
+  color: #393e46;
+  background-color:#b4f5ee; font-family: cursive; 
+  /*color: #393e46;  Cloud Burst color
+  background-color: linen;*/
+}
+h2 {
+  color:#00adb5;
+}
+hr {
+  border-style: dotted none none; /*When three values are specified, the first style applies to the top, the second to the left and right, the third to the bottom.*/
+  height: 0px;
+  width: 30px;
+  border-color: rgb(113, 112, 112);
+  border-width: 5px;
+}
+h3 {
+  color: #45454d;
+}
+tr {
+  text-align:left;
+}
+td {
+  padding-bottom:5px;
+}
+/************************ID Selectors***************************/
+#myName {
+  font-family: system-ui;
+  color: #007aa7;
+}
+/************************CLASS Selectors***************************/
+.myList {
+  color: green;
+}
+.circular {
+  border-radius: 30px;
+}
+.circular:hover {
+ border-radius: 11px;
+}

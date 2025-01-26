@@ -1,0 +1,13 @@
+body
+{
+    /*
+    background-color: #f0dd99;
+    background-image: url(https://bowvalleycollege.ca/-/media/bvc/home/menu/logo.ash);
+    background-position: top center;
+    background-repeat: repeat-y;
+    background-size: 200px 100px;
+    */
+background: #f0dd99 url(https://bowvalleycollege.ca/-/media/bvc/home/menu/logo.ash) top center / 200px 100px repeat-y;
+}
+
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connect Three</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  #board {
+    display: grid;
+    grid-template-columns: repeat(7, 60px);
+    gap: 5px;
+    background-color: #3498db;
+    padding: 5px;
+  }
+  .cell {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div id="board"></div>
+<button id="restart">Restart</button>
+<script>
+  const ROWS = 6;
+  const COLS = 7;
+  let currentPlayer = 1;
+  let board = [];
+  let gameOver = false;
+
+  const boardElement = document.getElementById('board');
+  const restartButton = document.getElementById('restart');
+
+  function createBoard() {
+    for (let row = 0; row < ROWS; row++) {
+      board[row] = [];
+      for (let col = 0; col < COLS; col++) {
+        const cell = document.createElement('div');
+        cell.classList.add('cell');
+        cell.dataset.row = row;
+        cell.dataset.col = col;
+        boardElement.appendChild(cell);
+        board[row][col] = 0;
+      }
+    }
+  }
+
+  function checkWinner(row, col) {
+    const directions = [[1, 0], [0, 1], [1, 1], [1, -1]];
+    for (let [dx, dy] of directions) {
+      let count = 1;
+      for (let i = 1; i <= 3; i++) {
+        const newRow = row + dx * i;
+        const newCol = col + dy * i;
+        if (newRow >= 0 && newRow < ROWS && newCol >= 0 && newCol < COLS && board[newRow][newCol] === currentPlayer) {
+          count++;
+        } else {
+          break;
+        }
+      }
+      for (let i = 1; i <= 3; i++) {
+        const newRow = row - dx * i;
+        const newCol = col - dy * i;
+        if (newRow >= 0 && newRow < ROWS && newCol >= 0 && newCol < COLS && board[newRow][newCol] === currentPlayer) {
+          count++;
+        } else {
+          break;
+        }
+      }
+      if (count >= 3) {
+        gameOver = true;
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function dropDisc(col) {
+    for (let row = ROWS - 1; row >= 0; row--) {
+      if (board[row][col] === 0) {
+        board[row][col] = currentPlayer;
+        const cell = document.querySelector(`.cell[data-row="${row}"][data-col="${col}"]`);
+        cell.style.backgroundColor = currentPlayer === 1 ? '#e74c3c' : '#f1c40f';
+        if (checkWinner(row, col)) {
+          setTimeout(() => {
+            alert(`Player ${currentPlayer} wins!`);
+          }, 100);
+        } else {
+          currentPlayer = currentPlayer === 1 ? 2 : 1;
+        }
+        return;
+      }
+    }
+  }
+
+  function restartGame() {
+    board = [];
+    currentPlayer = 1;
+    gameOver = false;
+    boardElement.innerHTML = '';
+    createBoard();
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach(cell => {
+      cell.addEventListener('click', () => {
+        if (!gameOver) {
+          const col = parseInt(cell.dataset.col);
+          dropDisc(col);
+        }
+      });
+    });
+  }
+
+  restartButton.addEventListener('click', restartGame);
+
+  createBoard();
+</script>
+</body>
+</html>

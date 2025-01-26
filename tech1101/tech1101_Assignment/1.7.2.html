@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.7.2</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="">
+    <fieldset style="width:35%">
+        <legend>Personal Information</legend>
+        <label>Enter Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="Name"></label>
+        <br><br>
+        <label>Enter Address:&nbsp;&nbsp;&nbsp; <input type="text" name="Address"></label>
+        <br><br>
+        <label>Gender:&nbsp;
+          <input type="radio" id="MALE" name="gender">Male
+          <input type="radio" id="FEMALE" name="gender">Female
+        </label>
+        <br><br>
+        <label>Email: <input type="text" name="email"></label>
+        <br><br>
+        <label>Agree with the terms?</label><input type="checkbox">
+    </fieldset>
+    <fieldset style="width:35%">
+        <legend>Login</legend>
+        <label>User Name: <input type="text" placeholder="Email or user ID"></label>
+        <label>Password: <input type="password" placeholder="Enter 6 to 20 chars" required minlength="6"></label>
+    </fieldset>
+    <fieldset style="width: 35%">
+        <legend>Other Controls</legend>
+        <label><input type="button" value="Choose File">No file chosen</label>
+        <br>
+        <button>Button</button>
+        <br>
+        <label>Please Write to us!</label>
+        <br>
+        <textarea name="message" rows="7" cols="40" placeholder="Your Comments Please..."></textarea>
+        <br>
+        <label>Method of Payment: </label>
+        <select>
+            <option value="Cash">Cash</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Debit Card">Debit Card</option>
+        </select>
+    </fieldset>
+<br><br>
+    <input type="submit" value="Submit Form">
+    </form>
+</body>
+</html>

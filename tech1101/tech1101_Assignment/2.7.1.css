@@ -1,0 +1,113 @@
+:root {                   /* CSS stylesheet */
+  --unit: calc(100vh / 21);
+  --unit1: calc(var(--unit) - 16px);
+  --unit2: calc(var(--unit) * 2 - 16px);
+  --unit3: calc(var(--unit) * 3 - 16px);
+  --unit5: calc(var(--unit) * 5 - 16px);
+  --unit8: calc(var(--unit) * 8 - 16px);
+  --unit13: calc(var(--unit) * 13 - 16px);
+  --unit21: calc(var(--unit) * 21 - 16px);
+}
+body {
+  background: grey;
+  width: 100vw;
+  height: 100vh;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+div {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  border: 2px solid red;
+}
+.div21 {
+    background-color: green;
+    /*top: var(--unit1);*/
+    /* left: var(--unit1);*/
+    width: var(--unit21);
+    height: var(--unit21);
+
+}
+.div13 {
+    background-color: rgb(233, 61, 233);
+    position: absolute;
+    /*top: var(--unit13);*/
+    left: calc(var(--unit21) + 16px);
+    width: var(--unit13);
+    height: var(--unit13);
+    top: 0px;
+}
+.div3 {
+   background-color: yellow;
+   position:absolute;
+   top: calc(var(--unit13) + 16px);
+   left: var(--unit21);
+   width: var(--unit3);
+   height: var(--unit3);
+}
+.div2 {
+    background-color: rgb(231, 63, 63);
+    position: absolute;
+    top: calc(var(--unit8) + 16px);
+    left: calc(var(--unit21) + 250px);
+    /* left: 1090px;*/
+    width: var(--unit2);
+    height: var(--unit2);
+}
+.div8 {
+
+    background-color: orange;
+    position: absolute;
+    top: calc(var(--unit8) + 16px);
+    left: calc(var(--unit21) + 231px);
+    width: calc(var(--unit3) + 16px);
+    height: var(--unit3);
+
+}
+
+.div1 {
+
+    background-color: red;
+    top: var(--unit1);
+    left: var(--unit1);
+    width: var(--unit1);
+    height: var(--unit1);
+
+}
+
+.div11 {
+
+    background-color: purple;
+    top: var(--unit11);
+    left: var(--unit11);
+    width: var(--unit11);
+    height: var(--unit11);
+
+}
+
+.div5 {
+
+    background-color: rgb(11, 49, 11);
+    position:absolute;
+    top: var(--unit21);
+    left: var(--unit21);
+    width: var(--unit5);
+    height: var(--unit5);
+}
+.div21 h1{
+  font-size: var(--unit13);
+}
+.div13 h1{
+  font-size: var(--unit8);
+}
+.div3 h1{
+  font-size: var(--unit3);
+}
+.div2 h1{
+  font-size: var(--unit2);
+}

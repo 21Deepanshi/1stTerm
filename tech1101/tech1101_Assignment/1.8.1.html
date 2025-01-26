@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=~, initial-scale=1.0">
+    <title>Feedback</title>
+</head>
+<body>
+    <form method="POST" action="index.html">
+        <fieldset style="width:20%">
+            <legend>Write to us</legend>
+            <label for="NAME">Your Name</label>
+            <input type="text" id="NAME" name="NAME" placeholder="your name" required/>
+            <br><br>
+            <label for="email">Your e-mail</label>
+            <input type="email" id="email" name="email" placeholder="your email">
+            <br><br>
+            <label for="message"><u>Your Comments:</u></label>
+            <br>
+            <textarea name="message" rows="7" cols="40" placeholder="Your message"></textarea>
+            <br><br>
+            <label>Rate Us:</label>
+            <input type="text" placeholder="RateUs" list="rating" required>
+            <datalist id="rating">
+                <option>&#11088;&#11088;&#11088;&#11088;&#11088;</option>
+                <option>&#11088;&#11088;&#11088;&#11088;</option>
+                <option>&#11088;&#11088;&#11088;</option>
+                <option>&#11088;&#11088;</option>
+                <option>&#11088;</option>
+            </datalist>
+            <br><br>
+            Satisfaction: <input type="range" size="2" name="satisfaction" min="1" max="5" value="3">
+            <br><br>
+            <input type="submit" value="SUBMIT">
+
+        </fieldset>
+</body>
+</html>

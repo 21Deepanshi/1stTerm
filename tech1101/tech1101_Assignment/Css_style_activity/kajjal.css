@@ -1,0 +1,70 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  max-height: 50dvh;
+  max-width: 100%;
+}
+#ContainerDiv {
+  max-width: none;
+  margin: 0px;
+}
+:root {
+  --one-seventh-width: calc(100vw/7);
+  --one-seventh-height: calc((100vh - 80px)/7);
+ }
+ 
+#TopDiv2, #MidDiv1, #BottomDiv1 {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  box-sizing: border-box;
+}
+#TopDiv1 {
+    background-color: #228B22;
+    padding: 1px;
+    color: blue;
+    width: calc(var(--one-seventh-height) * 7);
+    height: 80px;
+    margin-bottom: 0px;
+  }
+  p {
+    color: #a7f0ff;
+  }
+ 
+#TopDiv2 {
+  margin-left: calc(var(--one-seventh-height) * 0);
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  width: min(calc(var(--one-seventh-height) * 1), calc(var(--one-seventh-width) * 1));
+  height: min(calc(var(--one-seventh-height) * 1), calc(var(--one-seventh-width) * 1));
+  border: 5px solid #333;
+  padding: 1px;
+  color: blue;
+}
+ 
+#MidDiv1 {
+  margin-left: min(calc(var(--one-seventh-height) * 1), calc(var(--one-seventh-width) * 1));
+  display: flex;
+  flex-direction: column;
+  background-color: green;
+  width: min(calc(var(--one-seventh-height) * 2), calc(var(--one-seventh-width) * 2));
+  height: min(calc(var(--one-seventh-height) * 2), calc(var(--one-seventh-width) * 2));
+  border: 10px solid #FFC0CB;
+  padding: 2px;
+  color: blue;
+}
+ 
+#BottomDiv1 {
+  margin-left: min(calc(var(--one-seventh-height) * 3), calc(var(--one-seventh-width) * 3));
+  display: flex;
+  flex-direction: column;
+  background-color: #0000CD;
+  width: min(calc(var(--one-seventh-height) * 4), calc(var(--one-seventh-width) * 4));
+  height: min(calc(var(--one-seventh-height) * 4), calc(var(--one-seventh-width) * 4));
+  border: 20px solid magenta;
+  padding: 2px;
+  color: green;
+}

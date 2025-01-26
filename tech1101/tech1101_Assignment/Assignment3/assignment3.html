@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cashier Calculayor Website</title>
+</head>
+<body>
+    <fieldset>
+        <div id ="Admin-section">
+        <h1 id="heading1">Admin</h1>
+        <form id="admin-form">
+        <label for ="product_name">Add a new product</label><br>
+        <input type ="text" id="product_name" name="product_name" placeholder="product name">
+        <label for ="Add_product"></label>
+        <input type= "Submit" id = "Add_product" value="Add Product" name="Add_product">
+        <br><br>
+        <label for="existing-product">Select a product then add the price per unit</label><br><br>
+        <select id ="existing-product">
+        <!-- Options will be populated dynamically via JavaScript -->
+        </select>
+        <label for="price-per-unit"></label>
+        <input type="text" id="price-per-unit" placeholder="price">
+        <label for ="price"></label>
+        <input type= "Submit" id = "price" value="Add Price" name="price">
+        </form>
+        </div>
+    </fieldset><br>
+    <fieldset>
+        <div id ="checkout-section">
+        <h1 id ="heading2">Checkout</h1>
+        <!-- Checkout section -->
+        <button id="new-transaction-btn" onclick="startNewTransaction()"> New Transaction</button><br><br>
+        <label for="product-dropdown">Select a product then add the price per units</label><br><br>
+        <select id="product-dropdown">
+        <!-- Options will be populated dynamically via JavaScript -->
+        </select>&emsp;&emsp;
+        <label for="units">Unit:</label>
+        <input type="number" id="units" min="1" max="9">
+        <button id="add-to-cart-button" onclick="addProductToCart()">Add to cart</button><br><br>
+        <!-- Buttons labeled 1 to 9 for unit selection -->
+        <button onclick="selectUnits(1)">1</button>
+        <button onclick="selectUnits(2)">2</button>
+        <button onclick="selectUnits(3)">3</button>
+        <br>
+        <button onclick="selectUnits(4)">4</button>
+        <button onclick="selectUnits(5)">5</button>
+        <button onclick="selectUnits(6)">6</button>
+        <br>
+        <button onclick="selectUnits(7)">7</button>
+        <button onclick="selectUnits(8)">8</button>
+        <button onclick="selectUnits(9)">9</button>
+        <br><br>
+        <button onclick="pay()">Pay</button>
+        </div>
+    </fieldset><br>
+
+    <fieldset>
+        <div id="Receipt-section">
+        <h2>Receipt</h2>
+        <div id="receiptDetails"></div>
+        <p id="subtotal"></p>
+        <p id="tax"></p>
+        <p id="grandTotal"></p>
+        </div>
+    </fieldset>
+<script src ="script.js"></script>
+</body>
+</html>
