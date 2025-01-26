@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Element Actions Example</title>
+</head>
+<body>
+    <p id="hideParagraph">Hide this paragraph!</p>
+    <br>
+
+    <span>Change the text inside this span to read "I've been changed!"</span>
+    <br><br>
+
+    <div id="targetDiv">
+        <p>This is the target div.</p>
+    </div>
+    <br>
+
+    <h2 class="addCSS">Add some CSS to this heading</h2>
+    <p class="addCSS">Add some CSS to this paragraph</p>
+<script>
+    $(document).ready(function(){
+            // 1. Hide the paragraph with id = "hideParagraph"
+            $("#hideParagraph").hide();
+            
+            // 2. Change the text inside the <span></span> tags to be "I’ve been changed!"
+            $("span").text("I’ve been changed!");
+            
+            // 3. Change the HTML inside the div with id = "targetDiv"
+            $("#targetDiv").html('<p><strong>This is a new paragraph</strong></p>');
+            
+            // 4. Apply CSS to any elements with the class = "addCSS"
+            $(".addCSS").css({
+                "background-color": "lightblue",
+                "color": "red"
+            });
+});
+</script>
+</body>
+</html>

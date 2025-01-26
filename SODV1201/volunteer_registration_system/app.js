@@ -1,0 +1,71 @@
+// Require the File System module in order to work with files on my computer
+const fs = require('fs');
+
+// Require the Readline module in order to create an interface to get input from the user
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+// Import local modules
+const { displayFileLocation } = require('./displayFileLocation.js');
+const { readVolunteerData, promptVolunteerInput, validateVolunteerData, registerMoreVolunteers } = require('./getUserData.js');
+
+// Set the file name
+const VOLUNTEER_DATA_FILENAME = 'volunteers.json';
+
+
+// This function performs the actual registration
+async function runRegistration() {
+
+    try {
+        // Get the existing volunteer data (if any)
+        const existingVolunteerData = await readVolunteerData(VOLUNTEER_DATA_FILENAME);
+
+        // Print the list of existing volunteers the console
+        console.log('Existing Volunteer Data:');
+        console.log(existingVolunteerData);
+        console.log('------------------------');
+
+        // Set a flag to determine when we are done registering volunteers
+        let registerMore = true;
+        while (registerMore) {
+
+            // Ask the user for their data
+            const volunteerData = await promptVolunteerInput(rl);
+
+            // Validate the data
+            if (validateVolunteerData(volunteerData)) {
+
+                // The data is good, therefore add it to the existing data
+                existingVolunteerData.push(volunteerData);
+    
+                // Check if we should register more volunteers
+                registerMore = await registerMoreVolunteers(rl);
+            } else {
+                // The data is not good. Print an error and start again.
+                console.error('Incomplete volunteer details. Please try again.');
+            }
+        }
+
+        // We are done accepting inputs from the user. Now we want to write the data to the file.
+        const jsonData = JSON.stringify(existingVolunteerData, null, 2);
+        fs.writeFileSync(VOLUNTEER_DATA_FILENAME, jsonData);
+
+        // Display a success message
+        console.log('Volunteer details saved successfully.');
+
+        // Display the location of the JSON file
+        displayFileLocation(VOLUNTEER_DATA_FILENAME);
+
+    } catch (error) {
+        console.error('Error:', error);
+    } finally {
+        // Properly close the readline interface
+        rl.close();
+    }
+}
+
+// Start the registration process
+runRegistration();

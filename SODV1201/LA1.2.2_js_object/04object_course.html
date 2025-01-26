@@ -1,0 +1,76 @@
+<html>   
+   <head>
+      <style>
+         input{
+            border: solid blue 2px;
+            display: inline-block;
+         }
+         label{
+             width: 100px;
+             display: inline-block;
+             text-align: left;
+         } 
+         section{
+            margin: auto; 
+            width: 50%;
+            padding-top: 5%;
+         }        
+      </style>
+   <title>User-defined objects</title>
+      <script type = "text/javascript">
+       
+         // Define a function which will work as a method
+         function courseCode(code) {
+            this.ccode = code; 
+         }
+
+         function classRoom (room){
+             this.croom = room;
+         }
+         
+         function Course(cname, teacher) {
+            this.teacher = teacher;
+            this.cname  = cname;
+            this.codeInfo = courseCode;  // Assign that method as property.
+            this.roomInfo = classRoom;
+
+         }
+
+      </script>      
+   </head>
+   <body>   
+      <section id="wrap">
+         <h1>JS object Demo App</h1>
+          <div>
+            <label> code </label><input type="text" id="code" /> <br /> <br />
+            <label> name </label><input type="text" id="name" /> <br /> <br />
+            <label>teacher</label>  <input type="text" id="teacher" /> <br /> <br />
+            <label>class room</label> <input type="text" id="room" />  
+
+             <button onclick="CourseDetail();">submit</button>
+       </div>
+       <p><div id="res"></div></p>
+      </section>       
+     
+   
+
+      <script type = "text/javascript">      
+        function CourseDetail(){     
+            var newcode = document.getElementById('code').value;
+            var newname = document.getElementById('name').value;
+            var newteacher = document.getElementById('teacher').value;
+            var newroom = document.getElementById('room').value;        
+            
+            var mycourse = new Course(newname, newteacher);// create instance of course object using new operator
+            mycourse.codeInfo(newcode);
+            mycourse.roomInfo('Teams-online')
+            
+            document.write("course name is : " + mycourse.cname + "<br />");
+            document.write("course teacher is : " + mycourse.teacher + "<br />");
+            document.write("course code is : " + mycourse.ccode + " <br />" );
+            document.write("Classroom is : " + mycourse.croom + " <br />" );
+            // Modify this code, so that after the click event the result can be shown on the same page. 
+        }
+     </script>  
+   </body>
+</html>

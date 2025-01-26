@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+ 
+
+<p>array: <span id="ary"></span></p>
+
+<script>
+var numbers = [65, 44, 12, 4];
+
+//-------------eg1 function callback (explicit)
+
+numbers.forEach(myfun);
+
+function myfun(n ) {   
+  ary.innerHTML += n; 
+  console.log(n); 
+}
+
+//-------------eg2 function callback (implicit anonymous  function)
+numbers.forEach(function(n) {    
+  ary.innerHTML += n; 
+  console.log(n); 
+});
+//--------------eg3 Function expression
+
+var display=function(n) {   
+  ary.innerHTML += n; 
+  console.log(n); 
+}
+numbers.forEach(display);
+
+//--------------eg4 Arrow function
+numbers.forEach(n => {
+      console.log(n);
+      ary.innerHTML += n;
+      });
+
+//--------------eg5 Arrow function and multiple param , the array element and its index
+numbers.forEach((number, index) => {
+    console.log('Index: ' + index + ' Value: ' + number);
+    ary.innerHTML += 'Index: ' + index + ' Value: ' + number  +'<br />';
+});
+
+
+</script>
+
+</body>
+</html>

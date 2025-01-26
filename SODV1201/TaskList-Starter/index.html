@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2>Task List</h2>
+
+    <!-- Form controls for the user to enter a new task -->
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button id="addTaskButton">Add Task</button>
+
+    <!-- Table of existing tasks -->
+    <table id="taskTable">
+        <tr>
+            <th>Task Number</th>
+            <th>Task</th>
+        </tr>
+    </table>
+
+    <!-- Form controls for the user to delete a specific task -->
+    <div id="deleteTaskDiv">
+        <input type="number" id="taskNumberInput" placeholder="Enter a task number to delete">
+        <button id="deleteTaskButton">Delete Task</button>
+    </div>
+</div>
+</body>
+</html>

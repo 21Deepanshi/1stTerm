@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            p{
+                color: rgb(76, 218, 40);
+            }
+            div{
+                background-color: aqua;
+            }
+            #mydiv{
+                text-align: center;
+            }
+            h3{
+                text-align: center;
+            }
+            #myh3{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+    </style>
+    </head>
+    
+<body>
+    <h3 id="myh3" style="color: red;">Some text here</h3>
+    
+    <h1>JS HTML DOM methods</h1>
+    <p>You can do so many fun stuff with JS DOM methods. In this example you will learn how to change css of html element and how to add events to any html element</p>
+    
+    <h2>Changing CSS with JS</h2>
+
+    <p>Hello 2023</p>
+
+    <p id="p1">Hello World!</p>
+
+    <button type="button"  onclick="document.getElementById('p1').style.color = 'red'">Change color</button>
+
+    <button type="button"  onmouseover="alert('Hello today')">Mouse over me</button>
+
+
+    <script>
+        document.getElementById("p1").style.color = "blue";
+    </script>
+
+    <h2>Events in JS</h2>
+    <ol>
+        <li>Inline</li>
+        <li>HTMLElement.event</li>
+        <li>HTMLElement.addEventListener</li>
+
+    </ol>
+    <input type="button" id="button2" value="click button2"><p></p>
+    <input type="button" id="button3" value="click button3">
+
+    <script>
+        var btn2 = document.getElementById('button2');
+        
+        btn2.onmouseover = function(){ console.log('You mouseover on button2')}
+        btn2.onclick = function () { console.log("you clicked button2 but you don't see this message"); };
+        btn2.onclick = function () { console.log('you clicked button2'); };
+        btn2.onmouseout = function () { console.log('Bye bye...'); };
+
+        var btn3 = document.getElementById("button3");
+        btn3.addEventListener('click', function(){console.log("Button3 clicked this is event1")})
+        btn3.addEventListener('click', function(){console.log("Button3 clicked this is event2")})
+
+    </script>
+   
+
+</body>
+</html>

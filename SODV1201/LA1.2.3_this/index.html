@@ -1,0 +1,81 @@
+<!doctype HTML>
+ 
+<html lang="en">
+ 
+	<head>
+		<meta charset="UTF-8">
+		<title>Understand This</title>
+	</head>
+ 
+	<body>
+ 
+		<section>
+			<p>No content rendered!  Look in the developer console to see the magic.</p>
+		</section>
+ 
+		<script>
+ 
+			// Tell the JavaScript interpreter to apply strict syntax and binding rules.
+			 "use strict"
+ 
+			//
+			// First let's see what 'this' means in global scope (just hanging out in the open).
+			//
+			console.log("1/ In global scope, the keyword 'this' means -->"); console.log(this);
+			console.log("Conclusion: 'this' in global scope refers to the built-in window object.\n");
+			console.log("You won't use this pattern much, because the window object is already accessible in global scope.\n\n");
+ 
+			//
+			// Now let's create a simple function and call it to see what 'this' means inside a function call.
+			//
+			function TestFunction() {
+
+				console.log("2/ Within a function call, the keyword 'this' means -->"); 
+				console.log(this);
+				console.log("Conclusion: 'this' inside a function is undefined.  That seems weird at first, but really, what else could it be?");
+				console.log("If you don't 'use strict' this behavior is different.  But you should always 'use strict'.\n\n");
+			}
+			TestFunction();
+ 
+			//
+			// Now let's create a simple object with an embedded function and call it to see what 'this' means inside the function.
+			//
+			let TestObject = {
+				Name: 'Apples',
+				
+				Method: function() {
+					console.log("3/ In an object function call, the keyword 'this' means -->"); console.log(this);
+					console.log("Conclusion: 'this' inside an object's function is a reference to the object.  That makes sense -- the function has access to the object's context.");
+					console.log("We can prove it by accessing the 'Name' property of this object --> " + this.Name);
+					console.log("Yes, you have to use 'this.Name'.  Just using 'Name' won't work (try it).\n\n")
+					//console.log(Name);
+				}
+			}
+			TestObject.Method();
+ 
+			//
+			// Now let's create a JavaScript class with a method, and call it to see what 'this' means inside the method.
+			//
+			class TestClass {
+				constructor(InitialName) {
+					this.Name = InitialName;
+				}
+				Method() {
+					console.log("4/ In a class method call, the keyword 'this' means -->"); console.log(this);
+					console.log("Conclusion: 'this' inside a class method is a reference to the instance.  That makes sense -- the method has access to the instance context. ");
+					console.log("We can prove it by accessing the 'Name' property of this instance --> " + this.Name + "\n\n");
+				}
+			}
+			let TestInstance1 = new TestClass('Oranges');
+			TestInstance1.Method();
+			let TestInstance2 = new TestClass('Bananas');
+			TestInstance2.Method();
+ 
+		</script>
+	<!-- Optional Learning Activity -->
+	<!-- Modify this code by adding different html elements and display all the console output to the web page -->
+	<!-- Move all the JS code to an external js file -->
+	<!-- Understand how this keyword is used -->
+	</body>
+ 
+</html>

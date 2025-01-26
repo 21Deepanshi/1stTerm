@@ -1,0 +1,15 @@
+p{
+    color: rgb(76, 218, 40);
+}
+div{
+    background-color: aqua;
+}
+#mydiv{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+#myh3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

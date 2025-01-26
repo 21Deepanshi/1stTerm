@@ -1,0 +1,2 @@
+// Move all functions related to getting user data into this file, then export them as local modules to be used by app.js
+// readVolunteerData(), promptVolunteerInput(), validateVolunteerData(), registerMoreVolunteers()
