@@ -1,0 +1,101 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+  --blue: rgb(0,0,255);
+  --cyan: rgb(0,255,255);
+  --red: rgb(255,0,0);
+  --margenta: rgb(214, 47, 214);
+  --pink: rgb(255, 192, 203);
+  --black: rgb(0,0,0);
+  --green: rgb(0, 127, 0);
+  --height: calc((100vmin - 80px)/7) ;
+  --width: calc(100vmin/7);
+ }
+body{
+    font-size: 1em;
+    max-height: 50dvh;
+    max-width: 100dvw;
+ 
+}
+#ContainerDiv {
+margin: 0;
+/* max-width: 100%;*/
+}
+
+#TopDiv1
+{
+    background-color: var(--green);
+    margin-bottom: 0;
+    width: calc(var(--width) * 7);
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 1px;
+}
+#TopDiv1 > h1{
+    color: var(--blue);
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+#TopDiv1 > p{
+    color: var(--cyan);
+    font-size: 18px;
+    margin-bottom: 1px;
+    padding: 0px;
+}
+#TopDiv2
+{
+    display: flex;
+    flex-direction: column;
+    border: 5px solid var(--black);
+    position: absolute;
+    height: var(--height);
+    width: var(--width);
+    background-color: var(--red);
+    margin: auto;
+}
+#TopDiv2 > h1
+{
+    color: var(--blue);
+}
+#MidDiv1
+{
+    display: flex;
+    border: 10px solid var(--pink);
+    position: absolute; 
+    margin-top: var(--height);
+    margin-left: var(--width);
+    height: calc(var(--height) * 2);
+    width: calc(var(--width) * 2);
+    background-color: var(--green);
+}
+#MidDiv1 > h1
+{
+    color: var(--blue);
+    margin-left: 15px;
+    margin-top: 15px;
+}
+#BottomDiv1
+{
+    display: flex;
+    border: 15px solid var(--margenta);
+    position: absolute; 
+    margin-top: calc(var(--height) * 3);
+    margin-left: calc(var(--width) * 3);
+    /*width: 48vmin; 
+    height: 48vmin;*/
+    height: calc(var(--height) * 4);
+    width: calc(var(--width) * 4);
+    background-color: var(--blue);
+}
+#BottomDiv1 > h1
+{
+    color: var(--green);
+    margin-left: 30px;
+    margin-top: 40px;
+}

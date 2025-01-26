@@ -1,0 +1,86 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    max-height: 100%;
+    font-size: 42px;
+    box-sizing: border-box;
+}
+
+#ContainerDiv {
+max-width: 770px;
+margin: 0px;
+
+/*box-sizing: border-box;*/
+}
+
+#TopDiv1
+{
+    background-color: green;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+}
+#TopDiv1 > h1{
+    color: blue;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+#TopDiv1 > p{
+    color: cyan;
+    font-size: 24px;
+    margin: 0px;
+}
+#TopDiv2
+{
+    display:flex;
+    /*box-sizing: border-box;*/
+    border: 5px solid black;
+    position: absolute;
+    height: 110px;
+    width: 110px;
+    background-color: red;
+}
+#TopDiv2 > h1
+{
+    /*font-size: 30px;*/
+    color: blue;
+}
+#MidDiv1
+{
+    display: flex;
+    /*box-sizing: border-box;*/
+    border: 10px solid pink;
+    position: absolute; 
+    top: 220px;
+    left: 110px;
+    width: 220px;
+    height: 220px;
+    background-color: green;
+}
+#MidDiv1 > h1
+{
+    /*font-size: 45px;*/
+    color: blue;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+#BottomDiv1
+{
+    display: flex;
+    /*box-sizing: border-box;*/
+    border: 15px solid rgb(214, 47, 214);
+    position: absolute; 
+    top: 439px;
+    left: 331px;
+    width: 440px;
+    height: 440px;
+    background-color: rgb(0, 0, 255);
+}
+#BottomDiv1 > h1
+{
+    /*font-size: 45px;*/
+    color: green;
+    margin-left: 30px;
+    margin-top: 40px;
+}

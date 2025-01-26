@@ -1,0 +1,396 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    /*flex-wrap: nowrap;*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 0px;
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+    max-height: max-content;
+    max-width: max-content;
+}
+:root{
+    --one-seventh: calc(min(192vw, 192vh) / 7);
+}
+header { 
+    width: calc(var(--one-seventh) * 7);
+    background-image: url(images/talking_heads-speaking_in_tongues.png);
+    background-repeat: no-repeat;
+    background-position: 10%;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+} 
+@media only screen and (max-width: 800px){
+    header{ 
+        width: calc(var(--one-seventh) * 4);
+    }
+}
+header h1:nth-child(1)
+{
+    background-color: yellow;
+    margin: 0;
+    padding: 15px;
+    font-size: 1.6rem;
+    text-align: center;
+    text-transform: uppercase;
+    color:#434242;
+    letter-spacing: 1px;
+}
+header nav{
+    margin: 0;
+    padding: 0;
+}
+header nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 17px;
+    background-color: #434242;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+nav ul li {
+    display: inline;
+    margin-right: 40px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+header section 
+{ 
+    background-color: rgba(0, 0, 0, 0.8);
+    width: calc(var(--one-seventh) * 6);
+    height: calc(var(--one-seventh) + 150px);
+    margin: auto;
+    padding: 0;
+    color: white;
+}
+@media only screen and (max-width: 800px){
+    header section{ 
+        /* height: auto; */
+        width: calc(var(--one-seventh) * 4);
+        height: calc(var(--one-seventh) + 100px)
+    }
+}
+header section img { 
+    width: calc(var(--one-seventh) + 30px); 
+    height: calc(var(--one-seventh) + 30px); 
+    margin-right: 25px;
+    margin-top: 60px;
+    padding: 0;
+    opacity: 1;
+    float: right;
+}
+header section h1{
+    margin: 0;
+    font-family: monospace;
+    font-size: 2.6em;
+    color: yellow;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding-left: 4vmin;
+    padding-top: 6vmin;
+    padding-bottom: 0;
+    letter-spacing: -2px; /* Remove extra spacing between letters */
+    word-spacing: -10px; /* Remove extra spacing between words */
+    word-break: break-all;
+}
+@media only screen and (max-width: 800px){
+    header section h1{
+        font-size: 2em;
+    }
+}
+header section h2{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    padding-left: 4vmin;
+    padding-top: 1vmin;
+    margin: 0;
+    line-height: calc(var(--one-seventh) - 80vmin);
+    letter-spacing: 0px; /* Remove extra spacing between letters */
+    word-spacing: 0px; /* Remove extra spacing between words */
+}
+@media only screen and (max-width: 800px){
+    header section h2{
+        font-size: 1.5em;
+    }
+}
+header section h3{
+    order: 1;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    padding-left: 4vmin;
+    padding-top: 5vmin;
+    letter-spacing: 0px; /* Remove extra spacing between letters */
+    word-spacing: 0px; /* Remove extra spacing between words */
+}
+@media only screen and (max-width: 800px){
+    header section h3{
+        font-size: 1em;
+    }
+}
+main article{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    /* margin-right: 25vmin; */
+}
+article aside{
+    background-color: #434242;
+    border-bottom: 2px solid white;
+    position: absolute;
+    margin-left: calc(var(--one-seventh) + 100vmin);
+    display:flex;
+    flex-direction: column;
+    width: 47vmin;
+}
+@media only screen and (max-width: 800px){
+    article aside{
+        position: static; /* Remove absolute positioning */
+        margin: 0; /* Center align */
+        border-bottom: none; /* Remove border */
+        padding: 0px;
+        width: 110vw;
+    }
+}
+article aside h2{
+    background-color: yellow;
+    font-family: monospace;
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    word-spacing: -10px;
+    color: #4f4c4c;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-bottom: 20px
+}
+@media only screen and (max-width: 800px){
+    article aside h2{
+    position: static;
+    background-color: yellow;
+    font-family: monospace;
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    word-spacing: -10px;
+    color: #4f4c4c;
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-bottom: 20px
+    }
+}
+article aside p em{
+    letter-spacing: 0px;
+}
+article aside p{
+    color: white;
+    margin: 18px;
+    font-family: system-ui;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    font-weight: bold;
+}
+article aside p:nth-child(3)
+{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-right: 12px;
+}
+blockquote{
+    color: white;
+    margin-left: 60px;
+    margin-right: 40px;
+    font-family: system-ui;
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+blockquote sup {
+    font-size: 14px;
+}
+blockquote a{
+    color: yellow;
+    text-decoration: none;
+}
+blockquote a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+article aside section iframe{
+    border-top: 5px solid white;
+    width: 38vmin;
+    transform: translateX(-32%); /* Center the border horizontally*/
+    padding: 18px 5px;
+}
+@media only screen and (max-width: 800px){
+    article aside section iframe{
+    border-top: 5px solid white;
+    width: 100vmin;
+    transform: translateX(-10%); /* Center the border horizontally*/
+    padding: 15px 0px;
+    }
+}
+article section:nth-child(n){
+    margin-left: 16vmin;
+    margin-top: 3vmin;
+}
+article section:nth-child(2) h2{
+    background-color: yellow;
+    font-family: 'calibri';
+    font-size: 1.5em;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    padding: 2vmin 1vmin;
+    width: 120px;
+    text-align: center;
+    color: #434242;
+    text-transform: uppercase;
+}
+article section:nth-child(2) p {
+    font-size: 16px;
+    color:#434242;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    font-family: system-ui;
+    margin: 0;
+    padding: 2vmin;
+    padding-right: 0;
+    border-left: 3px solid yellow;
+}
+article section:nth-child(3) h2{
+    background-color: yellow;
+    font-family: 'calibri';
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding: 2vmin 1vmin;
+    width: 120px;
+    text-align: center;
+    color: #434242;
+    margin-left: 2vmin;
+    text-transform: uppercase;
+}
+article section:nth-child(3) p {
+    font-size: 16px;
+    color:#434242;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    font-family: system-ui;
+    margin: 0;
+    margin-left: 2vmin;
+    padding: 2vmin;
+    padding-right: 0;
+    border-left: 3px solid yellow;
+}
+article section:nth-child(4) h2{
+    background-color: yellow;
+    font-family: 'calibri';
+    font-size: 1.5em;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    padding: 2vmin 1vmin;
+    width: 120px;
+    text-align: center;
+    color: #434242;
+    text-transform: uppercase;
+}
+article section:nth-child(4) p {
+    font-size: 16px;
+    color:#434242;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    font-family: system-ui;
+    margin: 0;
+    padding: 2vmin;
+    padding-right: 0;
+    border-left: 3px solid yellow;
+}
+article section:nth-child(5) h2{
+    background-color: yellow;
+    font-family: 'calibri';
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding: 2vmin 1vmin;
+    width: 120px;
+    text-align: center;
+    color: #434242;
+    margin-left: 2vmin;
+    text-transform: uppercase;
+}
+article section:nth-child(5) p {
+    font-size: 16px;
+    color:#434242;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    font-family: system-ui;
+    margin: 0;
+    margin-left: 2vmin;
+    padding: 2vmin;
+    padding-right: 0;
+    border-left: 3px solid yellow;    
+}
+footer {
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: absolute;
+}
+ 
+footer section{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 0.7em;
+  color:#434242;
+  font-family: Arial, sans-serif;
+  border-top: 2px solid yellow;  
+  width: 167vmin;
+  transform: translateX(-5%);
+  text-decoration: none;
+}
+@media only screen and (max-width: 800px){
+    footer section{
+        font-size: 0.5em;
+        width: 100vmin;
+        transform: translateX(-2%);
+    }
+}
+ 
+section a{
+  background-color: yellow;
+  text-decoration: none;
+  padding: 5px;
+  color: #434242;
+}
+@media only screen and (max-width: 800px){
+    section a{
+        padding: 2px;
+    }
+}
+sup{
+    color:#434242;
+}
