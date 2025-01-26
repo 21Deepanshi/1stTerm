@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Online C++ Compiler  </title>
+  <link rel="shortcut icon" href="https://www.programiz.com/sites/tutorial2program/files/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+  <link rel="canonical" href="https://www.programiz.com/cpp-programming/online-compiler/" />  <meta name="description" content="The user friendly C++ online compiler that allows you to Write C++ code and run it online. The C++ text editor also supports taking input from the user and standard libraries. It uses the GCC (g++) compiler to compiler code." />
+
+  <!-- CMP and header ad code start -->
+  <script src="https://cmp.uniconsent.com/v2/stub.min.js"></script>
+  <script async src='https://cmp.uniconsent.com/v2/a8d3ae4937/cmp.js'></script>
+  <script type="text/javascript">
+    window.googletag = window.googletag || {};
+    window.googletag.cmd = window.googletag.cmd || [];
+    window.googletag.cmd.push(function () {
+      window.googletag.pubads().enableAsyncRendering();
+      window.googletag.pubads().disableInitialLoad();
+    });
+    (adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 1;
+  </script>
+  <script>
+    __tcfapi("addEventListener", 2, function (tcData, success) {
+      if (success && tcData.unicLoad === true) {
+        if (!window._initAds) {
+          window._initAds = true;
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = '//dsh7ky7308k4b.cloudfront.net/publishers/Programizcomnew.min.js';
+          document.head.appendChild(script);
+
+          try {
+            fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function (response) {
+              return true;
+            }).catch(function (e) {
+              if (document.getElementsByClassName("content-top-ad") != null && document.getElementsByClassName("content-top-ad").length > 0) {
+                document.getElementsByClassName("content-top-ad")[0].style.display = "none";
+              }
+              var ad_elements = document.getElementsByClassName("pub-ad");
+              while (ad_elements.length > 0) {
+                ad_elements[0].parentNode.removeChild(ad_elements[0]);
+              }
+
+              if (document.getElementById("carbon-block") != null) {
+                var carbonScript = document.createElement("script");
+                carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CKYDL27L&placement=wwwprogramizcom";
+                carbonScript.id = "_carbonads_js";
+                document.getElementById("carbon-block").appendChild(carbonScript);
+              }
+            });
+          } catch (error) {
+            console.log(error);
+          }
+        }
+      }
+    });
+  </script>
+  <!-- CMP and header tag ad code end -->
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TKXT7MH');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Buy sellads CSS-->
+  <style>
+    .pgAdWrapper {
+      min-height: 0 !important;
+    }
+
+    #carbonads {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --width: 728px;
+      --font-size: 22px
+    }
+
+    #carbonads {
+      display: block;
+      overflow: hidden;
+      max-width: var(--width);
+      position: relative;
+      background-color: #fcfcfc;
+      border: solid 1px #eee;
+      font-size: var(--font-size);
+      box-sizing: border-box;
+      margin: 36px 0 36px 0;
+      max-height: 90px
+    }
+
+    .detail #carbonads {
+      margin-top: 12px
+    }
+
+    #carbonads a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    #carbonads a:hover {
+      color: inherit
+    }
+
+    .carbon-wrap {
+      display: flex;
+      align-items: center
+    }
+
+    carbon-img {
+      display: block;
+      float: left;
+      margin: 0;
+      max-width: var(--width);
+      line-height: 1
+    }
+
+    .carbon-img img {
+      display: block;
+      margin: 0;
+      height: 90px;
+      width: auto
+    }
+
+    .carbon-text {
+      display: block;
+      float: left;
+      padding: 0 1em;
+      line-height: 1.35;
+      max-width: calc(100% - 130px - 2em);
+      text-align: left
+    }
+
+    .carbon-poweredby {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 6px 10px;
+      background: repeating-linear-gradient(-45deg, transparent, transparent 5px, hsla(0, 0%, 0%, .025) 5px, hsla(0, 0%, 0%, .025) 10px) hsla(203, 11%, 95%, .8);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      font-weight: 601;
+      font-size: 8px;
+      border-top-left-radius: 4px;
+      line-height: 1
+    }
+
+    @media only screen and (min-width:320px) and (max-width:759px) {
+      .carbon-text {
+        font-size: 14px
+      }
+    }
+  </style>
+
+  <!-- Generated using https://dns-prefetch-generator.github.io/ -->
+  <meta http-equiv="x-dns-prefetch-control" content="on" />
+  <link rel="dns-prefetch" href="//www.googletagservices.com" />
+  <link rel="dns-prefetch" href="//www.google-analytics.com" />
+  <link rel="dns-prefetch" href="//c.amazon-adsystem.com" />
+  <link rel="dns-prefetch" href="//dsh7ky7308k4b.cloudfront.net" />
+  <link rel="dns-prefetch" href="//securepubads.g.doubleclick.net" />
+  <link rel="dns-prefetch" href="//adservice.google.com" />
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+
+  <link rel="stylesheet" href="playground.css?v=1fsaf" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+</head>
+
+<body>
+  <!-- <select id="language-changer"></select> -->
+  <div class="container" id="root" data-lang="cpp">
+    <div class="spinner">
+      <div class="loader"><span>{</span><span>}</span></div>
+    </div>
+    <div class="mobile-nav-drawer">
+      <div class="nav-backdrop">
+      </div>
+      <div class="nav-menu">
+        <div class="nav-header-wrapper">
+          <div class="nav-logo-title-wrapper">
+            <a href="https://www.programiz.com/" target="_blank" class="nav-logo-link">
+              <img id="nav-logo" src="assets/logos/logo.svg" />
+            </a>
+          </div>
+          <button type="button" class="close-nav-btn" title="Close navigation">
+            <img class="svg" src="assets/icons/close.svg" />
+          </button>
+        </div>
+        <div class="nav-menu-list">
+          <a target="_blank"
+            href="https://www.programiz.com/python-programming/online-compiler/"
+            class="change-lang-row python "
+            title="Python Online Compiler">
+            <span class="change-lang-btn">
+              <img class="change-lang-btn-icon svg" src="assets/icons/python.svg" />
+            </span>
+            <span class="nav-menu-text">
+              Python Online Compiler
+            </span>
+          </a>
+          <a target="_blank"
+            href="https://www.programiz.com/r/online-compiler/"
+            class="change-lang-row r " class="change-lang-row r"
+            title="Online R Compiler">
+            <span class="change-lang-btn">
+              <img class="change-lang-btn-icon svg" src="assets/icons/r.svg" />
+            </span>
+            <span class="nav-menu-text">
+              Online R Compiler
+            </span>
+          </a>
+          <a target="_blank" href="https://www.programiz.com/sql/online-compiler/" class="change-lang-row sql"
+            title="SQL Online Editor">
+            <span class="change-lang-btn">
+              <img class="change-lang-btn-icon svg" src="assets/icons/sql.svg" />
+            </span>
+            <span class="nav-menu-text">
+              SQL Online Editor
+            </span>
+          </a>
+          <a target="_blank" href="https://www.programiz.com/html/online-compiler/" class="change-lang-row html"
+            title="Online HTML/CSS Editor">
+            <span class="change-lang-btn">
+              <img class="change-lang-btn-icon svg" src="assets/icons/html.svg" />
+            </span>
+            <span class="nav-menu-text">
+              Online HTML/CSS Editor
+            </span>
+          </a>
+          <a target="_blank"
+            href="https://www.programiz.com/java-programming/online-compiler/"
+            class="change-lang-row java " title="Online Java Compiler">
+            <span class="change-lang-btn">
+              <img class="change-lang-btn-icon svg" src="assets/icons/java.svg" />
+            </span>
+            <span class="nav-menu-text">
+              Online Java Compiler
+            </span>
+          </a>
+          <a target="_blank"
+            href="https://www.programiz.com/c-programming/online-compiler/"
+            class="change-lang-row c " title="C Online Compiler">
+            <span class="change-lang-btn">
+              <img class="change-lang-btn-icon svg" src="assets/icons/c.svg" />
+            </span>
+            <span class="nav-menu-text">
+              C Online Compiler
+            </span>
+          </a>
+          <a target="_blank"
+            href="https://www.programiz.com/cpp-programming/online-compiler/"
+            class="change-lang-row cpp active" title="C++ Online Compiler">
+            <span class="change-lang-btn">
+              <img class="change-lang-btn-icon svg" src="assets/icons/cpp.svg" />
+            </span>
+            <span class="nav-menu-text">
+              C++ Online Compiler
+            </span>
+          </a>
+          <a target="_blank"
+            href="https://www.programiz.com/csharp-programming/online-compiler/"
+            class="change-lang-row csharp " title="C# Online Compiler">
+            <span class="change-lang-btn">
+              <img class="change-lang-btn-icon svg" src="assets/icons/csharp.svg" />
+            </span>
+            <span class="nav-menu-text">
+              C# Online Compiler
+            </span>
+          </a>
+          <a target="_blank"
+            href="https://www.programiz.com/javascript/online-compiler/"
+            class="change-lang-row javascript "
+            title="JavaScript Online Compiler (Editor)">
+            <span class="change-lang-btn">
+              <img class="change-lang-btn-icon svg" src="assets/icons/javascript.svg" />
+            </span>
+            <span class="nav-menu-text">
+              JavaScript Online Compiler
+            </span>
+          </a>
+          <a target="_blank"
+            href="https://www.programiz.com/golang/online-compiler/"
+            class="change-lang-row golang "
+            title="Online GoLang Compiler">
+            <span class="change-lang-btn">
+              <img class="change-lang-btn-icon svg" src="assets/icons/golang.svg" />
+            </span>
+            <span class="nav-menu-text">
+              Online GoLang Compiler
+            </span>
+          </a>
+          <a target="_blank"
+            href="https://www.programiz.com/php/online-compiler/"
+            class="change-lang-row php " title="Online PHP Compiler">
+            <span class="change-lang-btn">
+              <img class="change-lang-btn-icon svg" src="assets/icons/php.svg" />
+            </span>
+            <span class="nav-menu-text">
+              Online PHP Compiler
+            </span>
+          </a>
+          <a target="_blank"
+            href="https://www.programiz.com/swift/online-compiler/"
+            class="change-lang-row swift " title="Online Swift Compiler">
+            <span class="change-lang-btn">
+              <img class="change-lang-btn-icon svg" src="assets/icons/swift.svg" />
+            </span>
+            <span class="nav-menu-text">
+              Online Swift Compiler
+            </span>
+          </a>
+          <a target="_blank"
+            href="https://www.programiz.com/rust/online-compiler/"
+            class="change-lang-row rust " title="Online Rust Compiler">
+            <span class="change-lang-btn">
+              <img class="change-lang-btn-icon svg" src="assets/icons/rust.svg" />
+            </span>
+            <span class="nav-menu-text">
+              Online Rust Compiler
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="header">
+        <div class="header-wrapper">
+          <div class="burger-menu">
+            <button type="button" class="burger-menu-btn" title="Open navigation">
+              <img class="svg burger-menu-btn-icon" src="assets/icons/burger.svg" />
+            </button>
+          </div>
+          <div class="logo-wrapper">
+            <h1 class="logo-title-wrapper">
+              <a href="https://www.programiz.com/" target="_blank" class="logo-link">
+                <img id="logo" src="assets/logos/logo.svg" />
+                <span class="logo-sub-title-wrapper">
+                  <span class="logo-sub-title">
+                    C++ Online                    Compiler                  </span>
+                </span>
+              </a>
+            </h1>
+          </div>
+        </div>
+        <div class="compiler-header-ad">
+          <div id="div-gpt-ad-Programizcom36786" class="content-top-ad">
+          </div>
+
+          <!-- buysell ads -->
+          <div class="compiler-header-ad" id="carbon-block"></div>
+
+        </div>
+        <div id="add-replacement"></div>
+        <div id="feedback-desktop">
+          <a id="ad-link">&nbsp;Learn Python App</a>
+        </div>
+        <div id="feedback-mobile">
+          <a id="mobile-ad-link">&nbsp;Learn Python</a>
+        </div>
+      </div>
+      <div class="mobile-top-bar clearfix">
+        <div class="options-wrapper">
+          <!-- <div id="back-button" class="options-item-wrapper clearfix">
+              <img class="svg options-item" src="assets/icons/back-arrow.svg" />
+            </div> -->
+          <div id="toggle-dark-mode-mobile" class="options-item-wrapper clearfix">
+            <img class="toggle-dark-mode-mobile-icon moon svg options-item" src="assets/icons/moon.svg" />
+            <img class="toggle-dark-mode-mobile-icon sun svg options-item" src="assets/icons/sun.svg" />
+          </div>
+        </div>
+        <div class="pills-wrapper">
+          <div class="pills clearfix">
+            <button class="pill active compiler-pill">
+              main.cpp            </button>
+            <button class="pill shell-pill">
+              Output            </button>
+          </div>
+        </div>
+        <div class="other-options-wrapper">
+          <!-- <div id="feedback-mobile" class="options-item-wrapper">
+              <a href="https://programiz.com/contact" class="options-item">
+                <img class="svg" src="assets/icons/message-square.svg" />
+              </a>
+            </div> -->
+          <div class="mobile-top-bar-run-button run">
+
+            <img src="assets/icons/play.svg" alt="run-icon" />
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-wrapper">
+        <a target="_blank"
+          href="https://www.programiz.com/python-programming/online-compiler/"
+          class="change-lang-btn python "
+          title="Online Python Compiler">
+          <img class="change-lang-btn-icon svg" src="assets/icons/python.svg" />
+        </a>
+        <a target="_blank"
+          href="https://www.programiz.com/r/online-compiler/"
+          class="change-lang-btn r " title="Online R Compiler">
+          <img class="change-lang-btn-icon svg" src="assets/icons/r.svg" />
+        </a>
+
+        <a target="_blank" href="https://www.programiz.com/sql/online-compiler/" class="change-lang-btn sql"
+          title="Online SQL Editor">
+          <img class="change-lang-btn-icon svg" src="assets/icons/sql.svg" />
+        </a>
+
+        <a target="_blank" href="https://www.programiz.com/html/online-compiler/" class="change-lang-btn html"
+          title="Online HTML/CSS Editor">
+          <img class="change-lang-btn-icon svg" src="assets/icons/html.svg" />
+        </a>
+        <a target="_blank"
+          href="https://www.programiz.com/java-programming/online-compiler/"
+          class="change-lang-btn java " title="Online Java Compiler">
+          <img class="change-lang-btn-icon svg" src="assets/icons/java.svg" />
+        </a>
+        <a target="_blank"
+          href="https://www.programiz.com/c-programming/online-compiler/"
+          class="change-lang-btn c " title="Online C Compiler">
+          <img class="change-lang-btn-icon svg" src="assets/icons/c.svg" />
+        </a>
+        <a target="_blank"
+          href="https://www.programiz.com/cpp-programming/online-compiler/"
+          class="change-lang-btn cpp active" title="Online C++ Compiler">
+          <img class="change-lang-btn-icon svg" src="assets/icons/cpp.svg" />
+        </a>
+        <a target="_blank"
+          href="https://www.programiz.com/csharp-programming/online-compiler/"
+          class="change-lang-btn csharp " title="Online C# Compiler">
+          <img class="change-lang-btn-icon svg" src="assets/icons/csharp.svg" />
+        </a>
+        <a target="_blank"
+          href="https://www.programiz.com/javascript/online-compiler/"
+          class="change-lang-btn javascript "
+          title="Online JavaScript Compiler (Editor)">
+          <img class="change-lang-btn-icon svg" src="assets/icons/javascript.svg" />
+        </a>
+        <a target="_blank"
+          href="https://www.programiz.com/golang/online-compiler/"
+          class="change-lang-btn golang "
+          title="Online Golang Compiler">
+          <img class="change-lang-btn-icon svg" src="assets/icons/golang.svg" />
+        </a>
+        <a target="_blank"
+          href="https://www.programiz.com/php/online-compiler/"
+          class="change-lang-btn php " title="Online PHP Compiler ">
+          <img class="change-lang-btn-icon svg" src="assets/icons/php.svg" />
+        </a>
+        <a target="_blank"
+          href="https://www.programiz.com/swift/online-compiler/"
+          class="change-lang-btn swift " title="Online Swift Compiler ">
+          <img class="change-lang-btn-icon svg" src="assets/icons/swift.svg" />
+        </a>
+        <a target="_blank"
+          href="https://www.programiz.com/rust/online-compiler/"
+          class="change-lang-btn rust " title="Online Rust Compiler">
+          <img class="change-lang-btn-icon svg" src="assets/icons/rust.svg" />
+        </a>
+      </div>
+      <div class="editor-wrapper">
+        <div class="editor-desktop-top-bar">
+          <div class="file-name">
+            main.cpp          </div>
+          <div class="desktop-top-bar__btn-wrapper">
+            <button type="button" id="toggle-expanded-mode-desktop" title="Enter Fullscreen">
+              <img class="toggle-expanded-mode-mobile-icon expand svg" src="assets/icons/expand.svg" />
+              <img class="toggle-expanded-mode-mobile-icon minimize hidden svg" src="assets/icons/minimize.svg" />
+            </button>
+            <button type="button" id="toggle-dark-mode-desktop" title="Toggle dark mode">
+              <img class="toggle-dark-mode-mobile-icon moon svg" src="assets/icons/moon.svg" />
+              <img class="toggle-dark-mode-mobile-icon sun svg" src="assets/icons/sun.svg" />
+            </button>
+            <!-- Change first none to flex to re-enable the save button -->
+            <button class="desktop-save-button"
+              style="display: none">
+              <span>
+                &nbsp;Save&nbsp;
+              </span>
+            </button>
+            <button class="desktop-run-button run">
+              <span class="run-text">
+                &nbsp;Run&nbsp;
+              </span>
+            </button>
+          </div>
+        </div>
+        <button class="mobile-run-button run">
+          Run
+        </button>
+        <div id="editor">// Online C++ compiler to run C++ program online
+#include &lt;iostream&gt;
+
+int main() {
+    // Write C++ code here
+    std::cout << "Try programiz.pro";
+
+    return 0;
+}</div>
+      </div>
+
+      <div class="terminal-wrapper">
+        <div class="terminal-desktop-top-bar">
+          <div class="shell-name">
+            Output          </div>
+          <div class="terminal-desktop-top-bar__btn-wrapper">
+            <button class="desktop-clear-button">
+              &nbsp;Clear&nbsp;
+            </button>
+          </div>
+        </div>
+        <div id="terminal"></div>
+      </div>
+    </div>
+  </div>
+
+  <script defer type="text/javascript">
+
+    const lang = "cpp";
+
+    var playStoreUrl =
+      "https://play.google.com/store/apps/details?id=com.programiz.learnpython",
+      appStoreUrl =
+        "https://apps.apple.com/app/apple-store/id1472188189?pt=120228772",
+      desktopUrl = "https://www.programiz.com/learn-python";
+
+    var os, a;
+
+    a = document.getElementById("ad-link");
+    b = document.getElementById("mobile-ad-link");
+
+
+    let utm = "utm_source=compiler-nav&utm_campaign=programiz&utm_medium=referral"
+
+    let baseURL = `https://programiz.pro?${utm}`
+
+    a.innerHTML = `Programiz PRO ❯`;
+    b.innerHTML = `Programiz PRO`;
+    a.target = "_blank"
+    b.target = "_blank"
+    a.href = baseURL;
+    b.href = baseURL;
+  </script>
+  <!-- The use of the cloudflare cdn for all external libraries is intential. We are trying to reduce the number
+         of DNS lookups.
+    -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/ace.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+  <script defer src="build/final.js?v=resize-fixv3"></script>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKXT7MH" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+</body>
+
+</html>
