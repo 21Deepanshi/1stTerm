@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch ToDo Data</title>
+</head>
+<body>
+    <h1>To Dos</h1>
+    <ul id="todo"></ul>
+
+    <script>
+        const ul = document.getElementById("todo");
+
+        // Creates a new empty DocumentFragment into which DOM nodes can be added to build an offscreen DOM tree.
+        const list = document.createDocumentFragment();
+
+        // WRITE YOUR CODE HERE
+        fetch('https://jsonplaceholder.typicode.com/todos')
+        .then(response => {
+            if(!response.ok){
+                throw new Error('Network Response was not ok');
+            }
+            return response.json();
+        })
+        .then(todos => {
+            todos.forEach(todo => {
+                //create a list
+                const li = document.createElement('li');
+
+                //check
+                if(todo.completed){
+                    li.innerHTML = `<s>${todo.title}</s>`;
+                } else{
+                    li.textContent = todo.title;
+                }
+                list.appendChild(li);
+            });
+            ul.appendChild(list);
+        })
+        .catch(error => {
+            console.error('There has been a problem with your fetch operation:', error);
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script>
+ function daysOfTheWeek(){ 
+  const dayOfWeek = parseInt(prompt("enter number 1 - 7"));
+  //value of expression quantity varies for all cases
+  var dayName;
+
+  switch (dayOfWeek) {
+    
+    case 1:
+      dayName = 'Sunday';
+      break;
+    case 2:
+      dayName = 'Monday';
+      break;
+    case 3:
+      dayName = 'Tuesday';
+      break;
+    case 4:
+      dayName = 'Wednesday';
+      break;
+    case 5:
+      dayName = 'Thursday';
+      break;
+    case 6:
+      dayName = 'Friday';
+      break;
+    case 7:
+      dayName = 'Saturday';
+      break;
+    default:
+      dayName = 'Invalid day of the week';
+  }
+
+  console.log(`The day corresponding to ${dayOfWeek} is ${dayName}.`);
+
+  }
+  daysOfTheWeek() //auto
+</script>
+<title>Switch</title>
+</head>
+<body>
+<main>
+  <p>to read more about switch case statement click <a href="https://www.tutorialspoint.com/javascript/javascript_switch_case.htm"> here</a></p>
+  <h2>Modify this application using html element and CSS</h2>
+</main>
+</body>
+</html>

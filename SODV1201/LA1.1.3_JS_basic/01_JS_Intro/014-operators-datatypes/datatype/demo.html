@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+
+        <!-- Input field for user's name -->
+        <p> <input placeholder="enter your name" id="name" onchange="greeting();"></p>
+
+        <!-- Placeholder for greeting message -->
+        <p id="demo" ></p>
+
+        <!-- Placeholder for demo message -->
+        <div id="demo1"></div>
+
+        <!-- Button to trigger demo function -->
+        <p><input type="button" value= "click me" onclick="demo();"  ></p>
+        <br />
+
+        <script>
+            // Variable declarations using var, let, and const keywords
+            var x = "hello";
+            var name = "KG";
+            let lastname = "BS";
+            let y;
+            const pi = 3.14;
+            var n, m, z;
+
+            // Simple arithmetic operation
+            var a = 5, b = 5, sum = a + b;
+
+            // Console.log() function to log result to browser console
+            console.log( "a = " + a +" + " + "b = " + b + " = " + sum );
+
+            // Document.write() function and getElementById() method to display result on web page
+            document.write( "a = " + a +" + " + "b = " + b + " = " + sum );
+            document.getElementById('demo').innerHTML = "a = " + a +" + " + "b = " + b + " = " + sum
+            
+        </script>
+
+        <!-- External JavaScript file called demo.js -->
+        <script src="demo.js"></script>
+
+    </body>
+</html>

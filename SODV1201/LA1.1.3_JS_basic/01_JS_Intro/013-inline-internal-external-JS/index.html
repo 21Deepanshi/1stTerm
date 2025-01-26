@@ -1,0 +1,29 @@
+<!doctype HTML>
+ 
+<html lang="en">
+ 
+	<head>
+		<meta charset="UTF-8">
+        <title>Inline, Internal and External JS</title>
+        <script src="lib/index.js" ></script>  <!--External file included-->
+	</head> 
+	<body> 
+		 
+       <h1>Inline, Internal and External JS</h1>
+       <!-- Inline -->
+        <h2 onmousemove="document.body.style.background='gray'" onclick="alert('It is me again')" >Hello Class</h2>
+
+        <!-- Internal -->
+        <p id="message"></p>
+        <button onclick="hello();">Greet</button>
+        <script>
+            function hello(){
+                document.getElementById('message').innerHTML="Hello this is your hello function :)";
+            }
+        </script>
+        <!-- External -->
+        <button onclick="sum()">Click me</button>
+	</body>
+ 
+</html>
+ 

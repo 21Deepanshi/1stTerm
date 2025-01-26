@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+<title>JavaScript Conditionals Demo</title>
+</head>
+<body>
+  <p id="frt"></p>
+<main>
+  <h1>JavaScript for and foreach </h1>
+  <script>
+
+    //for loop
+    // var i;
+    // for (i=0 ;  i<10 ;  i=i+2){  //Post and pre increment ++ , post and predecrement  --
+    //   document.write(i);
+    //   document.write("<br />")
+    // }
+
+    // 1
+    // 3
+    // 5
+    // 7
+
+    //forEach
+    const fruit = ['Apples','Oranges','Bananas','Pears'];
+    
+    fruit.forEach(function(item) {
+        console.log(item);
+        document.write(item)
+        //alert(item);
+    });
+
+    //EXample for
+
+    function showfruits() {
+      const fruit = ['Apples','Oranges','Bananas','Pears'];//0,1,2,3
+      var text = "";
+      var i;
+
+      for (i = 0; i < fruit.length; i++) {
+        text += fruit[i] + "<br>";
+      }
+
+      document.getElementById("demo").innerHTML = text;
+}
+
+
+//EXample 
+// for ..in , for...of
+  function showname() {
+    var person = {fname:"Alem", lname:"Mari", age:30, status:"Student"};  //[] {}
+    
+    var text = "";
+    var x;
+    
+    for (x in person) {
+      text += person[x] + " ";
+    }
+    document.getElementById("demo1").innerHTML = text;
+}
+
+function showfruits2() {  
+  var text2 = "";
+    for (const y of fruit) {
+      text2 += y + " ";
+    }
+    document.getElementById("demo2").innerHTML = text2;
+}
+
+</script>
+  <h2>for...loop function call</h2>
+  Output : <p id="demo"></p><br />
+
+  <input type="button" value="show fruits" onclick="showfruits();" />
+  <br /><br />
+  <h2>for...in function call</h2>
+  Output1: <p id="demo1"></p>
+  <input type="button" value="show name" onclick="showname();" />
+  <br /><br />
+  <h2>for of function call</h2>
+  Output2: <p id="demo2"></p>
+  <input type="button" value="show name" onclick="showfruits2();" />
+
+</main>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>JS Datattype and Operators overview</title>
+        <!-- <style>
+            h1,h2{
+                padding: 20px;;
+                margin: auto;
+                text-align: center;
+            }
+            h2{
+                margin-top: 15%;
+            }
+        </style> -->
+               <!-- Add style to your page please -->
+    </head>
+    <body>
+        <header>
+            <!-- -->
+            <h1>JS DataType and Operators</h1>
+        </header>
+        <section>
+            <div>
+                <h2>Result</h2>
+                <ul>
+                    <li id="li1"></li>
+                </ul>
+                <input type="button" value="display" onclick="op();">
+            </div>
+
+        </section>
+        <script>
+            function op(){
+                var a=5, b= 5;
+                var c = a +b
+                console.log(a + " + " + b + ": " + c);
+                document.getElementById("li1").innerHTML=a + " + " + b + " = " + c;
+            }
+           
+
+        </script>
+
+        
+        <!-- <script src="lib.js"></script> -->
+    </body>
+</html>

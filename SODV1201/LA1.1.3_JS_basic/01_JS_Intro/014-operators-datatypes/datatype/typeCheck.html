@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS datatypes and oprators</title>
+    </head>
+    <h1>List of JS data types and operators</h1>
+    <h2><a href="https://developer.mozilla.org/en-US/docs/Glossary/Primitive" target="_blank">Primitive data types</a></h2>
+    <ul>         
+        <li>null</li>
+        <li>undefined</li>
+        <li>boolean</li>
+        <li>number </li>
+        <li>string</li>
+        <li>bigint </li>
+        <li>Symbol</li>
+    </ul>
+    <h2>Operators</h1>
+        <li><a href="https://www.w3schools.com/js/js_operators.asp" target="_blank">Summary of is operators</a></li>
+
+    <script>
+        var x;
+        console.log("value of z = " + x); //undefined value and type
+        console.log("type of x is "+ typeof x); //undefined value and type
+        var y = {}
+        console.log("value of y = " + y);
+        console.log("type of y is "+  typeof y);
+
+        var z = null;
+        console.log("value of z = " + z)
+        console.log("type of z is " + typeof z);
+
+        //To see the output wrap each line with console.log
+        typeof null          // "object" (not "null" for legacy reasons)
+        typeof undefined     // "undefined"
+        null === undefined   // false
+        null  == undefined   // true
+        null === null        // true
+        null  == null        // true
+        !null                // true
+        isNaN(1 + null)      // false
+        isNaN(1 + undefined) // true
+    </script>
+</html>

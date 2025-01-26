@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>JavaScript Loop statements</title>
+</head>
+<body>
+  <p id="frt"></p>
+<main>
+  <h1>JavaScript for loops example </h1>
+  <ul>
+    <li>for...</li>
+    <li>for..in</li>
+
+    <li>forEach</li>
+    <li>for..of</li>
+    <li>framework based functions filter, map, reduce etc</li>
+  </ul>
+  
+  <script>
+      var i; 
+      document.write("<h2>for </h2>")
+      for (i = 0 ; i <= 6 ; i++)  //i++ and ++i 
+      {
+          document.write("Hello World!\n  <br />");//modify this code to display this message output vertically on your browser
+      }
+    //==================================================================
+    //for loop , used to loop through a rang of values, to simplify code
+    var i;
+    document.write("<h2>for </h2>")
+    for (i=5; i>=0; i=i-1){  //i = 5,i = 4, i = 3  i = 2 i = 1  i= 0
+      document.write("i = " + i);
+      document.write("<br />")
+    }
+    
+    //=================================================================
+    //for in , used to loop through object property value
+    var myobj = {n1: {sub:"12345"}, n2: 032, n3: "five"};
+    var student = {name:"TG",id:"001",dept:"sd"}//obj     
+    
+    document.write("<h2>for in</h2>")
+    for (var i in myobj) {
+
+      document.write(i +":"+myobj[i]+" ");
+    }
+    document.write("<br />");
+    //==================================================================
+
+    //for of , used to work on particular element of an array
+    const fruit = ['Apples',2,3,'Oranges','Bananas','Pears',{veg:"xxx"}, [1,2,3]]; //fruit[0]
+
+    document.write("<h2>for of</h2>")
+    for (const ele of fruit) {
+      document.write(ele);
+    }
+    document.write("<br />");
+    //==================================================================
+    //foreach mainly used to loop through array
+    document.write("<h2>forEach</h2>")
+    fruit.forEach(function(e) {
+        console.log(e);
+        document.write(e)
+    });
+    </script>
+</main>
+<br />
+<p>Reference1 <a href="https://www.geeksforgeeks.org/loops-in-javascript/">click here</a></p>
+<p>Reference2 <a href="https://bitsofco.de/for-in-vs-for-of/">click here</a></p>
+
+<!-- Refer the following pages https://bitsofco.de/for-in-vs-for-of/     -->
+<!-- Structure this code by creating a function for each program -->
+</body>
+</html>

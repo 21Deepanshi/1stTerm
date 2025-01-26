@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Loop through n</title>
+    </head>
+    <body>
+        <h1>List all the numbers</h1>
+        Enter a positive number<input id="num" type="number" onchange="displayNumber();">
+        <p id="result"  style="margin:40px"></p>
+
+        <script>
+            //Demo for how loop works
+            function displayNumber(){
+                var n = document.getElementById("num").value;
+                var sum = 0
+                for(var x = 0; x<=n; x++){
+                    //alert(x)
+                    sum = sum + x //0+0, 0 + 1, 1 + 2,3 + 3, 6+4
+                    console.log( "x = " + x);
+                    console.log("sum = " +sum)
+                    document.getElementById("result").innerHTML+=x + "  ";
+                }
+                console.log("Hello");
+            }         
+        </script>
+    </body>
+</html>
