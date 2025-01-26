@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/markTheGrade.html">Mark to Grade</a></li>
+                <li><a href="../pages/staffInformation.html">Staff Information</a></li>
+                <li><a href="../pages/temperatureConvertor.html">Temperature Converter</a></li>
+            </ul>
+        </nav>
+    </header><br>
+
+    <div class="containers">
+        <h1>Temperature Converter</h1>
+        <form id="temp-form">
+            <label for="fahrenheit">Enter Temperature in Fahrenheit</label>
+            <input type="text" id="fahrenheit" name="fahrenheit">
+            <button type="submit">Submit</button>
+            <p id="error-message" class="hidden"></p>
+        </form>
+        <div id="results" class="hidden">
+            <p id="celsius-result"></p>
+            <p id="kelvin-result"></p>
+        </div>
+    </div>
+
+    <footer>
+        Deepanshi &copy; <span id="currentDate"></span>, <span id="currentMonth"></span> <span id ="currentYear"></span>. All rights reserved.
+    </footer>
+
+    <script src = "../js/common.js"></script>
+    <script src ="../js/temperatureConvertor.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark to Grade</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/markTheGrade.html">Mark to Grade</a></li>
+                <li><a href="../pages/staffInformation.html">Staff Information</a></li>
+                <li><a href="../pages/temperatureConvertor.html">Temperature Converter</a></li>
+            </ul>
+        </nav>
+    </header><br>
+
+    <div class="containers">
+        <h1>Mark to Grade</h1>
+        <form id="gradeForm">
+            <label for="mark">Enter your mark (0-100) </label>
+            <input type="text" id="mark" name="mark"><br>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="result"></p>
+    </div>
+
+    <footer>
+        Deepanshi &copy; <span id="currentDate"></span>, <span id="currentMonth"></span> <span id ="currentYear"></span>. All rights reserved.
+    </footer>
+
+    <script src="../js/markTheGrade.js"></script>
+    <script src ="../js/common.js"></script>
+    
+</body>
+</html>

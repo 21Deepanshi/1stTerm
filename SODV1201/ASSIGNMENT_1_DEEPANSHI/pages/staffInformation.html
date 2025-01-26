@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Information</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/markTheGrade.html">Mark to Grade</a></li>
+                <li><a href="../pages/staffInformation.html">Staff Information</a></li>
+                <li><a href="../pages/temperatureConvertor.html">Temperature Converter</a></li>
+            </ul>
+        </nav>
+    </header><br>
+   
+    <div class="container">
+        <h1>Staff Information</h1>
+        <table id="staff-table">
+            <thead>
+                <tr>
+                    <th>Name <button onclick="sortTable('name', 'asc')">▲</button><button onclick="sortTable('name', 'desc')">▼</button></th>
+                    <th>Role</th>
+                    <th>Location</th>
+                    <th>Employee ID</th>
+                    <th>Start Date</th>
+                    <th>Salary <button onclick="sortTable('salary', 'asc')">▲</button><button onclick="sortTable('salary', 'desc')">▼</button></th>
+                </tr>
+            </thead>
+            <tbody id="staff-body">
+            <!-- Staff rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div><br><br><br>
+
+    <footer>
+        Deepanshi &copy; <span id="currentDate"></span>, <span id="currentMonth"></span> <span id ="currentYear"></span>. All rights reserved.
+    </footer>
+
+    <script src ="../js/common.js"></script>
+    <script src="../js/staffInformation.js"></script>
+
+</body>
+</html>
